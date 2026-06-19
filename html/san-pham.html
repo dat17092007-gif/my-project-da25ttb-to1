@@ -1,4 +1,81 @@
-<table class="table table-bordered">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Danh sách sản phẩm</title>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h2>Minh họa BS Grid</h2>
+
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+
+            <div class="col">
+                <div class="card product-item">
+
+                    <div class="ratio ratio-1x1 product-image">
+                        <img src="../assets/images/hoa-hong.jpg"
+                             alt="Hoa Hồng"
+                             class="card-img-top">
+                    </div>
+
+                    <div class="card-body product-info">
+                        <h4 class="card-title text-danger">Hoa Hồng</h4>
+
+                        <h5 class="text-danger">
+                            Giá khởi điểm: 36.000đ
+                        </h5>
+
+                        <p style="text-align:justify">
+                            Hoa hồng là loài hoa thuộc chi Rosa, nổi tiếng bởi vẻ đẹp thanh lịch, hương thơm quyến rũ và sự đa dạng về màu sắc. Với những cánh hoa mềm mại cùng hương thơm dịu nhẹ, hoa hồng được xem là biểu tượng của tình yêu, sự lãng mạn và vẻ đẹp cao quý.
+
+                        <button class="btn btn-info"
+                                data-bs-toggle="modal"
+                                data-bs-target="#hoaHongModal">
+                            Xem chi tiết
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal fade" id="hoaHongModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title text-danger">
+                        Chi tiết sản phẩm Hoa Hồng
+                    </h4>
+
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal">
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <div class="col-md-5">
+                            <img src="../assets/images/hoa-hong.jpg"
+                                 class="img-fluid rounded"
+                                 alt="Hoa Hồng">
+                        </div>
+
+                        <div class="col-md-7">
+
+                            <h3 class="text-danger">Hoa Hồng</h3>
+
+                            <h4 class="text-success">
+                                Giá: 36.000đ
+                            </h4><table class="table table-bordered">
                                 <tr>
                                     <th>Mã sản phẩm</th>
                                     <td>HH001</td>
