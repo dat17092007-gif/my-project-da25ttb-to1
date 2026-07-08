@@ -1,68 +1,218 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Trang thông tin cá nhân</title>
- <meta charset="utf-8">
- <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Tổng Hợp - Nguyễn Bá Đạt</title>
+    <!-- Sử dụng Bootstrap 5 để giao diện đồng bộ và đẹp mắt -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body { background-color: #f8f9fa; }
+        .avatar { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #0d6efd; }
+        .nav-tabs .nav-link { color: #495057; font-weight: 500; }
+        .nav-tabs .nav-link.active { font-weight: bold; }
+    </style>
 </head>
 <body>
- <div class="container">
-  <h1>Nguyễn Bá Đạt</h1>
-  <h2>Trang thông tin cá nhân</h2>
-  <div class="intro-box">
-   <img class="avatar" src="../assets/images/avatar.jfif" alt="avartar">
-   <div class="intro-content">
-    <h3>Giới thiệu bản thân</h3>
-    <p>Xin chào! Tôi là <b>Nguyễn Bá Đạt</b>, sinh viên ngành <b>Công nghệ thông tin</b>. Tôi yêu thích lập trình và thiết kế web. Mục tiêu của tôi là trở thành một lập trình viên chuyên nghiệp.</p>
-    <p>Tôi đang học tại <b>Đại học Trà Vinh</b>. Tôi luôn cố gắng học tập và phát triển kỹ năng mỗi ngày.</p>
-   </div>
-  </div>
-  <div class="section-title">Thông tin chi tiết</div>
-   <table>
-    <tr>
-     <th>Thông tin</th>
-      <th>Nội dung</th>
-    </tr>
-    <tr>
-     <td>Họ và tên</td>
-     <td>Nguyễn Bá Đạt</td>
-    </tr>
-    <tr>
-     <td>Tuổi</td>
-     <td>19</td>
-    </tr>
-    <tr>
-     <td>Lớp</td>
-     <td>DA25TTB</td>
-    </tr>
-    <tr>
-     <td>Nơi học tập</td>
-     <td>Đại học Trà Vinh</td>
-    </tr>
-   </table>
-  <div class="section-title">Sở thích</div>
-   <ul>
-    <li>Nghe nhạc</li>
-    <li>Xem phim</li>
-    <li>Chơi game</li>
-   </ul>
 
-  <div class="section-title">Kỹ năng và mục tiêu</div>
-   <ol>
-    <li>Biết HTML cơ bản</li>
-    <li>Đang học CSS và JavaScript</li>
-    <li>Muốn làm website cá nhân</li>
-   </ol>
-  <div class="section-title">Liên hệ</div>
-   <p>
-    Facebook:
-    <a href="https://www.facebook.com/share/1D5CwiJjHF/?mibextid=wwXIfr">Fb: Nguyễn Đạt</a>
-   </p>
-   <p>
-    Email:
-    <a href="mailto: dat17092007@gmai.com">Đây là gmail cảu tôi</a>
-   </p>
- </div>
+<div class="container my-4">
+    <!-- Thanh điều hướng (Tabs) để chuyển đổi giữa các trang -->
+    <ul class="nav nav-tabs justify-content-center mb-4" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-pane" type="button" role="tab">Thông tin cá nhân</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="bcc-tab" data-bs-toggle="tab" data-bs-target="#bcc-pane" type="button" role="tab">Bảng cửu chương</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-pane" type="button" role="tab">Đăng nhập</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="product-tab" data-bs-toggle="tab" data-bs-target="#product-pane" type="button" role="tab">Sản phẩm (Grid)</button>
+        </li>
+    </ul>
+
+    <!-- Nội dung của từng trang cũ -->
+    <div class="tab-content bg-white p-4 rounded shadow-sm" id="myTabContent">
+        
+        <!-- SOURCE 1 & 4: TRANG THÔNG TIN CÁ NHÂN -->
+        <div class="tab-pane fade show active" id="profile-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="text-center mb-4">
+                <h1>Nguyễn Bá Đạt</h1>
+                <h4 class="text-muted">Trang thông tin cá nhân</h4>
+            </div>
+            
+            <div class="row align-items-center mb-4">
+                <div class="col-md-3 text-center">
+                    <!-- Bạn hãy sửa lại đường dẫn ảnh cho đúng nếu cần nhé -->
+                    <img class="avatar mb-3" src="../assets/images/avatar.jfif" alt="avatar">
+                </div>
+                <div class="col-md-9">
+                    <h3>Giới thiệu bản thân</h3>
+                    <p>Xin chào! Tôi là <b>Nguyễn Bá Đạt</b>, sinh viên ngành <b>Công nghệ thông tin</b>. Tôi yêu thích lập trình và thiết kế web. Mục tiêu của tôi là trở thành một lập trình viên chuyên nghiệp.</p>
+                    <p>Tôi đang học tại <b>Đại học Trà Vinh</b> (Lớp: DA25TTB). Tôi luôn cố gắng học tập và phát triển kỹ năng mỗi ngày.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h5 class="border-bottom pb-2 text-primary">Thông tin chi tiết</h5>
+                    <table class="table table-bordered">
+                        <tr><th width="40%">Họ và tên</th><td>Nguyễn Bá Đạt</td></tr>
+                        <tr><th>Tuổi</th><td>19</td></tr>
+                        <tr><th>Lớp</th><td>DA25TTB</td></tr>
+                        <tr><th>Nơi học tập</th><td>Đại học Trà Vinh</td></tr>
+                    </table>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <h5 class="border-bottom pb-2 text-primary">Sở thích & Kỹ năng</h5>
+                    <h6>Sở thích:</h6>
+                    <ul>
+                        <li>Nghe nhạc</li>
+                        <li>Xem phim</li>
+                        <li>Chơi game</li>
+                    </ul>
+                    <h6>Kỹ năng và mục tiêu:</h6>
+                    <ol>
+                        <li>Biết HTML cơ bản</li>
+                        <li>Đang học CSS và JavaScript</li>
+                        <li>Muốn làm website cá nhân</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <h5 class="border-bottom pb-2 text-primary">Liên hệ</h5>
+                <p>Facebook: <a href="https://www.facebook.com/share/1D5CwiJjHF/?mibextid=wwXIfr" target="_blank">Fb: Nguyễn Đạt</a></p>
+                <p>Email: <a href="mailto:dat17092007@gmail.com">Đây là gmail của tôi</a></p>
+            </div>
+        </div>
+
+        <!-- SOURCE 2: BẢNG CỬU CHƯƠNG -->
+        <div class="tab-pane fade" id="bcc-pane" role="tabpanel" aria-labelledby="bcc-tab" tabindex="0">
+            <h3 class="mb-3 text-success">In Bảng Cửu Chương</h3>
+            <div class="row g-3 align-items-center mb-3">
+                <div class="col-auto">
+                    <label for="txtSo" class="col-form-label">Nhập vào 1 số từ 1 đến 10:</label>
+                </div>
+                <div class="col-auto">
+                    <input type="number" class="form-control" name="txtSo" id="txtSo" min="1" max="10" value="2">
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-success" id="btnPrint" onclick="printBCC(document.getElementById('txtSo').value)">In bảng cửu chương</button>
+                </div>
+            </div>
+            <div id="result" class="p-3 border rounded bg-light text-monospace" style="white-space: pre-line; line-height: 1.6;">
+                Chỗ này sẽ hiển thị bảng cửu chương tương ứng
+            </div>
+        </div>
+
+        <!-- SOURCE 3: FORM ĐĂNG NHẬP -->
+        <div class="tab-pane fade" id="login-pane" role="tabpanel" aria-labelledby="login-tab" tabindex="0">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <form id="frmLogin" action="quan-tri.php" method="post" class="border p-4 rounded bg-light shadow-sm">
+                        <h2 class="text-center mb-4">Đăng nhập</h2>
+                        <div class="mb-3">
+                            <label for="txtUsername" class="form-label">Username:</label>
+                            <input class="form-control" type="text" name="txtUsername" id="txtUsername" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="txtPassword" class="form-label">Password:</label>
+                            <input class="form-control" type="password" name="txtPassword" id="txtPassword" required>
+                        </div>
+                        <button type="submit" name="sbLogin" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOURCE 5: DANH SÁCH SẢN PHẨM (BS GRID & MODAL) -->
+        <div class="tab-pane fade" id="product-pane" role="tabpanel" aria-labelledby="product-tab" tabindex="0">
+            <h2 class="mb-4 text-danger">Minh họa BS Grid</h2>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm product-item">
+                        <div class="ratio ratio-1x1 product-image">
+                            <img src="../assets/images/hoa-hong.jpg" alt="Hoa Hồng" class="card-img-top">
+                        </div>
+                        <div class="card-body product-info d-flex flex-column justify-content-between">
+                            <div>
+                                <h4 class="card-title text-danger">Hoa Hồng</h4>
+                                <h5 class="text-danger mb-3">Giá khởi điểm: 36.000đ</h5>
+                                <p style="text-align:justify" class="small text-muted">
+                                    Hoa hồng là loài hoa thuộc chi Rosa, nổi tiếng bởi vẻ đẹp thanh lịch, hương thơm quyến rũ và sự đa dạng về màu sắc...
+                                </p>
+                            </div>
+                            <button class="btn btn-info w-100 text-white" data-bs-toggle="modal" data-bs-target="#hoaHongModal">
+                                Xem chi tiết
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- MODAL CHI TIẾT SẢN PHẨM (Nằm ngoài cùng body để tránh lỗi hiển thị) -->
+<div class="modal fade" id="hoaHongModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title text-danger">Chi tiết sản phẩm Hoa Hồng</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <img src="../assets/images/hoa-hong.jpg" class="img-fluid rounded" alt="Hoa Hồng">
+                    </div>
+                    <div class="col-md-7">
+                        <h3 class="text-danger">Hoa Hồng</h3>
+                        <h4 class="text-success mb-3">Giá: 36.000đ</h4>
+                        <table class="table table-bordered">
+                            <tr><th>Mã sản phẩm</th><td>HH001</td></tr>
+                            <tr><th>Tên sản phẩm</th><td>Hoa Hồng Đỏ</td></tr>
+                            <tr><th>Màu sắc</th><td>Đỏ</td></tr>
+                            <tr><th>Xuất xứ</th><td>Việt Nam</td></tr>
+                            <tr><th>Loại</th><td>Hoa cắt cành</td></tr>
+                            <tr><th>Tình trạng</th><td>Còn hàng</td></tr>
+                            <tr><th>Số lượng</th><td>100 bó</td></tr>
+                        </table>
+                    </div>
+                </div>
+                <hr>
+                <h5>Mô tả sản phẩm</h5>
+                <p style="text-align:justify">
+                    Hồng hay hường là tên gọi chung cho các loài thực vật có hoa dạng cây bụi hoặc cây leo lâu năm thuộc chi Rosa, họ Rosaceae, với hơn 100 loài có màu sắc đa dạng. Hoa hồng nổi tiếng với vẻ đẹp và hương thơm quyến rũ, thường được dùng làm quà tặng trong các dịp đặc biệt.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success">Thêm vào giỏ hàng</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JAVASCRIPT XỬ LÝ BẢNG CỬU CHƯƠNG -->
+<script>
+    function printBCC(num) {
+        let n = parseInt(num);
+        if (isNaN(n) || n < 1 || n > 10) {
+            document.getElementById('result').innerHTML = "Vui lòng nhập một số hợp lệ từ 1 đến 10.";
+            return;
+        }
+        
+        let output = `<strong>BẢNG CỬU CHƯƠNG ${n}</strong>\n\n`;
+        for (let i = 1; i <= 10; i++) {
+            output += `${n} x ${i} = ${n * i}\n`;
+        }
+        document.getElementById('result').innerHTML = output;
+    }
+</script>
 </body>
 </html>
